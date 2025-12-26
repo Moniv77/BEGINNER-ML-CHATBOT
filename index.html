@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Skincare Chatbot</title>
+    <link rel="stylesheet" href="/static/style.css">
+</head>
+<body>
+
+<h2>Skincare Recommendation Chatbot</h2>
+
+<form method="POST">
+    <label>Skin Type:</label>
+    <select name="skin_type">
+        <option>oily</option>
+        <option>dry</option>
+        <option>combination</option>
+        <option>normal</option>
+        <option>sensitive</option>
+    </select>
+
+    <label>Skin Tone:</label>
+    <select name="skin_tone">
+        <option>light</option>
+        <option>nude</option>
+        <option>tan</option>
+        <option>brown</option>
+    </select>
+
+    <label>Concern:</label>
+    <select name="concern">
+        <option>acne</option>
+        <option>oily</option>
+        <option>dryness</option>
+        <option>dullness</option>
+        <option>pores</option>
+    </select>
+
+    <button type="submit">Get Recommendation</button>
+</form>
+
+{% if recommendation %}
+<h3>Recommended Solution:</h3>
+<p>{{ recommendation }}</p>
+{% endif %}
+
+</body>
+</html>
